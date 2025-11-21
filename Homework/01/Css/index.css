@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+}
+/* top welcome text */
+.top-text{
+    text-align: center;
+    padding: 10px;
+    background-color: #87CEFA;
+
+}
+
+/* table make up */
+.periodic-table{
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.periodic-table td{
+    border: 1px solid #999;
+    width: 80px;
+    height: 60px;
+    vertical-align: top;
+    color: black;
+}
+.periodic-table a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px;
+    border-radius: 50px;
+}
+/* legend */
+.legend{
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* responsive helpers */
+:root{
+    --cell-w: 80px;
+    --cell-h: 60px;
+    --table-max: 1200px;
+}
+
+/* ensure predictable sizing */
+* { box-sizing: border-box; }
+
+/* make table horizontally scrollable on narrow viewports */
+.periodic-table{
+    display: block;
+    width: 95%;
+    max-width: var(--table-max);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* use CSS vars for easy scaling */
+.periodic-table td{
+    width: var(--cell-w);
+    height: var(--cell-h);
+}
+
+/* shorter paddings on small elements */
+.periodic-table a{
+    padding: 6px;
+}
+
+/* prevent overflowing text and keep layout sane */
+.periodic-table td a{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* responsive typography and swatches */
+.legend .item { font-size: 0.9rem; }
+.legend .swatch { width: 18px; height: 18px; }
+
+/* breakpoints */
+@media (max-width: 1024px) {
+    :root { --cell-w: 64px; --cell-h: 52px; --table-max: 900px; }
+    .element .symbol { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+    :root { --cell-w: 56px; --cell-h: 48px; --table-max: 720px; }
+    .top-text { padding: 8px; font-size: 0.95rem; }
+    .element .symbol { font-size: 18px; }
+    .element .name { font-size: 12px; }
+    .legend { gap: 0.5rem; }
+    .legend .swatch { width: 16px; height: 16px; }
+}
+
+@media (max-width: 480px) {
+    :root { --cell-w: 48px; --cell-h: 44px; --table-max: 420px; }
+    .periodic-table td { border-width: 0.8px; }
+    .periodic-table a { padding: 4px; border-radius: 8px; font-size: 0.85rem; }
+    .element { padding: 6px; min-width: 48px; }
+    .legend { font-size: 0.85rem; gap: 0.5rem; padding: 6px; }
+    .legend .swatch { width: 14px; height: 14px; }
+}
+
+/* ensure keyboard focus remains visible on small screens */
+.periodic-table a:focus { outline: 2px solid rgba(0,0,0,0.25); outline-offset: 2px; }
+
+
+
+/* category colors */
+.element { padding: 8px; min-width: 64px; text-align: center; }
+.element .symbol { font-weight: 700; font-size: 22px; }
+.element .name { font-size: 14px; }
+
+.alkali { background:#FF6666; }           /* Alkali metals */
+.alkaline-earth { background:#FFD8A8; }  /* Alkaline earth metals */
+.transition { background:#FFD700; }      /* Transition metals */
+.post-transition { background:#C0C0C0; } /* Post-transition metals */
+.metalloid { background:#9ACD32; }       /* Metalloids */
+.nonmetal { background:#7FFFD4; }        /* Nonmetals */
+.halogen { background:#FFB6C1; }         /* Halogens */
+.noble-gas { background:#87CEFA; }       /* Noble gases */
+.lanthanoid { background:#FFB266; }      /* Lanthanides */
+.actinide { background:#FF99CC; }        /* Actinides */
+
+/* legend styling */
+.legend { margin-top: 1rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; }
+.legend .item { display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; }
+.legend .swatch { width:18px; height:18px; border:1px solid #444; display:inline-block; }
+.legend .swatch.alkali { background:#FF6666; }
+.legend .swatch.alkaline-earth { background:#FFD8A8; }
+.legend .swatch.transition { background:#FFD700; }
+.legend .swatch.post-transition { background:#C0C0C0; }
+.legend .swatch.metalloid { background:#9ACD32; }
+.legend .swatch.nonmetal { background:#7FFFD4; }
+.legend .swatch.halogen { background:#FFB6C1; }
+.legend .swatch.noble-gas { background:#87CEFA; }
+.legend .swatch.lanthanoid { background:#FFB266; }
+.legend .swatch.actinide { background:#FF99CC; }

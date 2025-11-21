@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+}
+.top-text h1{
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+body{
+    display: grid;
+    place-items: center; 
+}
+
+
+/* Element Box */
+#element-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Element Card */
+.element-card{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(245, 250, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+}
+
+/* Element decor */
+.element-symbol{
+    font-size: 100px;
+    font-weight: 700;
+    color: #333333;
+    border-radius: 15px;
+}
+.element-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: #666666;
+    margin-top: 15px;
+}
+.element-atomic-number{
+    font-size: 20px;
+    font-weight: 500;
+    color: #666666;
+}
+.element-atomic-weight{
+    font-size: 20px;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 15px;
+}
+.element-description{
+    font-size: 16px;
+    color: #444444;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+/* Element img */
+.element-immage img{
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+.element-immage h3{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+
+
+/* Back Button */
+.back-button{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 10px;
+    background-color: #FF6666;
+    transition: 0.3s;
+    border-radius: 8px;
+
+}
+.back-button a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+.back-button:hover{
+    background-color: #FF3333;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* category colors */
+.element { padding: 8px; min-width: 64px; text-align: center; }
+.element .symbol { font-weight: 700; font-size: 1rem; }
+.element .name { font-size: 0.75rem; }
+
+.alkali { background:#FF6666; }           /* Alkali metals */
+.alkaline-earth { background:#FFD8A8; }  /* Alkaline earth metals */
+.transition { background:#FFD700; }      /* Transition metals */
+.post-transition { background:#C0C0C0; } /* Post-transition metals */
+.metalloid { background:#9ACD32; }       /* Metalloids */
+.nonmetal { background:#7FFFD4; }        /* Nonmetals */
+.halogen { background:#FFB6C1; }         /* Halogens */
+.noble-gas { background:#87CEFA; }       /* Noble gases */
+.lanthanoid { background:#FFB266; }      /* Lanthanides */
+.actinide { background:#FF99CC; }        /* Actinides */
