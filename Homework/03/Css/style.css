@@ -27,6 +27,10 @@ body {
 	line-height: 1.6;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* Links */
 a {
 	text-decoration: none;
@@ -71,6 +75,9 @@ a {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 	.motion-block {
 		animation: none !important;
 		opacity: 1 !important;
